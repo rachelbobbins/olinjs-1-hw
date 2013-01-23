@@ -1,10 +1,13 @@
 function start() {
   console.log("Request handler 'start' was called.");
+  return "Hello Start";
 }
 
 function upload() {
   console.log("Request handler 'upload' was called.");
-
-  xports.start = start;
-  exports.upload = upload;
+  return "Hello Upload"
 }
+
+
+exports.start = start;
+exports.upload = upload;
