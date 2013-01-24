@@ -19,7 +19,10 @@ function start(route, handle) {
 
   }
 
-  http.createServer(onRequest).listen(8888);
+
+  var port = process.env.PORT || 8888
+
+  http.createServer(onRequest).listen(port);
   console.log("Server has started");  
 }
 
