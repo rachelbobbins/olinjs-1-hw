@@ -15,7 +15,7 @@ function start(response, postData) {
     '<h3>Rachel\'s rudimentary photo uploader</h3>' +
     '<form action="/upload" enctype="multipart/form-data" '+
     'method="post">'+
-    '<input type="file" name="upload" multiple="multiple" class="btn">'+
+    '<input type="file" name="upload" multiple="multiple">'+
     '<input type="submit" value="Upload file" class="btn btn-warning offset1"/>'+
     '</form>'+
     '</body>'+
