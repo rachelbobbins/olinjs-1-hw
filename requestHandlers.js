@@ -9,12 +9,14 @@ function start(response, postData) {
     '<head>'+
     '<meta http-equiv="Content-Type" '+
     'content="text/html; charset=UTF-8" />'+
+    '<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">'+
     '</head>'+
     '<body>'+
+    '<h3>Rachel\'s rudimentary photo uploader</h3>' +
     '<form action="/upload" enctype="multipart/form-data" '+
     'method="post">'+
-    '<input type="file" name="upload" multiple="multiple">'+
-    '<input type="submit" value="Upload file" />'+
+    '<input type="file" name="upload" multiple="multiple" class="btn">'+
+    '<input type="submit" value="Upload file" class="btn btn-warning offset1"/>'+
     '</form>'+
     '</body>'+
     '</html>';
