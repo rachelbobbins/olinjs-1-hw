@@ -34,10 +34,14 @@ function upload(response, request) {
   form.parse(request, function(error, fields, files) {
     console.log("parsing done");
 
-    fs.rename(files.upload.path, "tmp/test.png", function(err) {
+    if (error) {
+      console.log("Error parsing form: " + error);
+    }
+    fs.rename(files.upload.path, "/tmp/test.png", function(err) {
       if (err) {
         fs.unlink("/tmp/test.png");
-        fs.rename(files.upload.path, "tmp/test.png");
+        fs.rename(files.upload.path, "/tmp/test.png");
+        console.log("error:" + err );
       }
     });
 
@@ -50,7 +54,7 @@ function upload(response, request) {
 
 function show(response, postData) {
   console.log("Request handler 'show' was called");
-  fs.readFile("tmp/test.png", "binary", function(error, file){
+  fs.readFile("/tmp/test.png", "binary", function(error, file){
     if (error){
       response.writeHead(500, {"Content-Type": "text/plain"});
       response.write(error + "\n");
