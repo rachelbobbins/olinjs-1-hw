@@ -1,4 +1,7 @@
-#olin.js #1 — homework
+
+#olin.js #1 — homework, as completed by Rachel Bobbins
+(original assignment described below)
+
 
 **Due Jan 25**
 
