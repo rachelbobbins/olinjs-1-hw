@@ -7,15 +7,15 @@ function start(route, handle) {
     var postData = "";
     console.log("Request for " + pathname + " receieved");
     
-    request.setEncoding("utf8");
-    request.addListener("data", function(postDataChunk){
-      postData += postDataChunk;
-      console.log("Received POST data chunk: "+ postDataChunk);
-    });
+    // request.setEncoding("utf8");
+    // request.addListener("data", function(postDataChunk){
+    //   postData += postDataChunk;
+    //   console.log("Received POST data chunk: "+ postDataChunk);
+    // });
 
-    request.addListener("end", function(){
-      route(handle, pathname, response, postData);  
-    });
+    // request.addListener("end", function(){
+      route(handle, pathname, response, request);  
+    // });
 
   }
 
